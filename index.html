@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>LUIS MUÑOZ - ASESOR COMERCIAL </title>
+<meta content="Concesionaria Fadua Tucumán S.A. Venta de autos nuevos y usados en Concepción, Tucumán. Reservá el tuyo ahora." name="description"/>
+<meta content="autos, 0km, usados, concesionaria, Fadua, Tucumán, Honda, Fiat" name="keywords"/>
+<meta content="LUIS MUÑOZ - Asesor Comercial" property="og:title"/>
+<meta content="Venta de autos nuevos y usados en Tucumán. Honda, Fiat y más. ¡Reservá el tuyo ahora!" property="og:description"/>
+<meta content="img/logofadua2.png" property="og:image"/>
+<meta content="website" property="og:type"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding-top: 140px; /* espacio para encabezado fijo */
+      background-color: #f3f4f6;
+    }
+    header {
+      background-color: #1E1E1E;
+      color: white;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+<script>
+  function ocultarBienvenida() {
+    const bienvenida = document.getElementById('bienvenida');
+
+    // Aplicamos transición suave
+    bienvenida.classList.add('opacity-0');
+
+    // Después de 500ms (como la duración de la animación), lo ocultamos completamente
+    setTimeout(() => {
+      bienvenida.style.display = 'none';
+    }, 500); // <- debe coincidir con "duration-500" en el div
+  }
+</script>
+<body>
+
+<!-- PANTALLA DE BIENVENIDA -->
+<div
+  id="bienvenida"
+  class="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-80 text-white transition-opacity duration-500 animate__animated animate__fadeIn"
+>
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-30"
+    style="background-image: url('img/bg-welcome.jpg');"
+  ></div>
+
+  <div class="relative z-10 flex flex-col items-center text-center px-4 space-y-8 max-w-xl">
+    <!-- Logo al centro -->
+    <img
+      src="img/logo3.png"
+      alt="Logo Fadua Tucumán"
+      class="w-56 h-56 animate-pulse drop-shadow-xl"
+    />
+
+    <!-- Título -->
+    <h1 class="text-4xl md:text-5xl font-bold text-[#C6A75E]">
+      ¡Bienvenido...!
+    </h1>
+    <p class="text-lg md:text-xl text-white">
+      Descubrí nuestros autos 0km, usados y planes especiales.
+    </p>
+
+    <!-- Beneficios -->
+    <ul class="space-y-3 text-white text-[20px] leading-relaxed text-left">
+      <li class="flex items-start gap-2">
+        <span class="text-green-500 text-xl">✅</span>
+        <span>Entrega inmediata.</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-green-500 text-xl">✅</span>
+        <span>Créditos a sola firma</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-green-500 text-xl">✅</span>
+        <span>Financiación con cuotas accesibles</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-green-500 text-xl">✅</span>
+        <span>Variedad de usados en excelente estado</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-green-500 text-xl">✅</span>
+        <span>Stock disponible en toda la gama de 0km</span>
+      </li>
+    </ul>
+
+    <!-- Botón de ingreso -->
+    <button
+      class="mt-8 bg-[#C6A75E] hover:bg-yellow-400 text-black font-semibold py-3 px-10 rounded-full shadow-lg hover:shadow-yellow-300/60 transition-transform duration-300 active:scale-95"
+      onclick="ocultarBienvenida()"
+      aria-label="Ingresar al sitio"
+    >
+      INGRESAR 🚗
+    </button>
+  </div>
+</div>
+<!-- BOTÓN WHATSAPP FLOTANTE CON ANIMACIÓN -->
+<a aria-label="WhatsApp" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg animate-bounce transition-all duration-300 z-50" href="https://web.whatsapp.com/send?phone=5493865626441" target="_blank">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M20.52 3.48A11.88 11.88 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.2 1.6 6.03L0 24l6.15-1.61A11.9 11.9 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.18-3.48-8.52zM12 22a9.9 9.9 0 0 1-5.06-1.4l-.36-.21-3.65.96.98-3.56-.23-.37A9.88 9.88 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.24-7.26c-.29-.15-1.71-.84-1.97-.94s-.46-.15-.65.15-.75.94-.92 1.13-.34.22-.63.07c-.29-.15-1.23-.45-2.35-1.43-.87-.78-1.45-1.74-1.62-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.2-.29.29-.48.1-.19.05-.36-.02-.51s-.65-1.56-.89-2.14c-.23-.56-.47-.49-.65-.5h-.56c-.19 0-.48.07-.73.36s-.95.93-.95 2.27c0 1.33.98 2.62 1.12 2.8.15.19 1.92 2.93 4.66 4.11.65.28 1.15.45 1.55.58.65.21 1.23.18 1.69.11.52-.08 1.71-.7 1.95-1.38.24-.68.24-1.27.17-1.38-.06-.11-.26-.17-.54-.3z"></path>
+</svg>
+</a>
+<!-- ENCABEZADO -->
+<header class="bg-[#1E1E1E] shadow-lg fixed top-0 left-0 right-0 z-50">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between px-4 py-3 gap-4">
+<!-- Logo y nombre -->
+<div class="flex items-center gap-4 w-full md:w-auto">
+<img alt="Logo Fadua Tucumán" class="w-16 h-16 rounded-full shadow border-2 border-[#C6A75E] bg-white" src="img/logofadua2.png"/>
+<div>
+<h1 class="text-2xl md:text-3xl font-bold text-[#C6A75E] leading-tight drop-shadow">LUIS MUÑOZ</h1>
+<h2 class="text-sm md:text-base font-semibold text-white tracking-wide">Asesor Comercial · Agencia oficial de FIAT</h2>
+</div>
+</div>
+<!-- Navegación escritorio -->
+<nav class="hidden md:flex items-center gap-6 px-6 py-3 bg-black/80 rounded-2xl shadow-xl border border-white/70 backdrop-blur-md">
+<a class="text-white font-semibold transform transition duration-300 hover:text-[#C6A75E] hover:-translate-y-1" href="#usados">
+    Usados
+  </a>
+<a class="text-white font-semibold transform transition duration-300 hover:text-[#C6A75E] hover:-translate-y-1" href="#cero-km">
+    0km
+  </a>
+<a class="text-white font-semibold transform transition duration-300 hover:text-[#C6A75E] hover:-translate-y-1" href="#plan-ahorro">
+    Plan de Ahorro
+  </a>
+<button class="bg-[#C6A75E] text-black px-5 py-2 rounded-full font-semibold transition-all duration-300 hover:bg-yellow-400 shadow-md hover:shadow-lg hover:-translate-y-1 transform ml-2" onclick="openModal('modalReserva')">
+Hacé tu consulta ✔
+  </button>
+</nav>
+<!-- Botón menú móvil -->
+<button aria-controls="mobile-menu" aria-label="Abrir menú" class="md:hidden text-[#C6A75E] focus:outline-none" id="menu-toggle">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Buscador SIEMPRE visible debajo del header principal -->
+<div class="bg-[#232323] py-2 px-4 border-t border-[#C6A75E]">
+<div class="max-w-3xl mx-auto flex items-center gap-2">
+<svg class="w-5 h-5 text-[#C6A75E]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+<line stroke-width="2" x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+<input class="w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C6A75E] bg-white text-black placeholder-gray-500 shadow" id="searchInput" placeholder="Buscar autos por modelo, año, estado..." type="text"/>
+</div>
+</div>
+<!-- Menú móvil -->
+<div class="hidden w-full md:hidden bg-[#232323] border-t border-[#C6A75E] py-4 px-4 space-y-2 text-center" id="mobile-menu">
+<a class="block py-2 text-white hover:text-[#C6A75E] font-semibold transition" href="#usados">Usados</a>
+<a class="block py-2 text-white hover:text-[#C6A75E] font-semibold transition" href="#cero-km">0km</a>
+<a class="block py-2 text-white hover:text-[#C6A75E] font-semibold transition" href="#plan-ahorro">Plan de Ahorro</a>
+<button class="block w-full py-2 bg-[#C6A75E] text-black rounded-full font-semibold hover:bg-yellow-400 transition mt-2" onclick="openModal('modalReserva')">
+      Hacé tu consulta ✔
+    </button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6">
+
+  <!-- GALERÍA USADOS -->
+<section class="py-10 scroll-mt-[140px] pt-[180px]" id="usados">
+<h2 class="text-2xl font-bold text-center text-[#1E1E1E] mb-10">GALERÍA USADOS</h2>
+<div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3" id="autosUsadosContainer">
+<!-- HONDA HR-V INT 964-->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Honda HR-V usada" class="w-full h-64 object-cover" src="img/hrv.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">HONDA HR-V EX CVT</h3>
+<p>Año: 2019</p>
+<p>Kilometraje: 65.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $27.195.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- CITROEN C4 LOUNGE INT 959-->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="CITROEN C4 LOUNGE HDI 115 MT6 FEEL PAC" class="w-full h-64 object-cover" src="img/citroenc4.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">CITROEN C4 LOUNGE HDI 115 MT6 FEEL PAC</h3>
+<p>Año: 2019</p>
+<p>Kilometraje: 41.200 km</p>
+<p>Estado: Usado – Exelente</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $17.070.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- FORD FIESTA KD SE PLUS INT 927-->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford Fiesta usada" class="w-full h-64 object-cover" src="img/fiesta.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FORD FIESTA KD SE PLUS</h3>
+<p>Año: 2014</p>
+<p>Kilometraje: 104.400 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $13.834.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- FIAT ARGO DRIVE 1.3 BLANCO INT 944  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Fiat Argo Drive 1.3" class="w-full h-64 object-cover" src="img/argo1.jpg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT ARGO DRIVE 1.3</h3>
+<p>Año: 2018</p>
+<p>Kilometraje: 126.722 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $15.545.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- PEUGEOT 208 ALLURE 1.6 -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Peugeot 208 allure 1.6" class="w-full h-64 object-cover" src="img/2082.JPEG"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">PEUGEOT 208 ALLURE 1.6</h3>
+<p>Año: 2020</p>
+<p>Kilometraje: 79.000 km</p>
+<p>Estado: Usado – Excelente</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $18.585.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- TOYOTA COROLLA CROSS XEI 2.0 CVT BLANCO INT 956-->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Toyota Corolla Cross" class="w-full h-64 object-cover" src="img/cross.jpg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">TOYOTA COROLLA CROSS XEI 2.0 CVT</h3>
+<p>Año: 2022</p>
+<p>Kilometraje: 35.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $34.910.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- FIAT PULSE DRIVE MT 1.3 MY22 INT 951-->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Fiat Pulse drive 1.3 mt" class="w-full h-64 object-cover" src="img/pulse.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT PULSE DRIVE MT 1.3 MY22</h3>
+<p>Año: 2022</p>
+<p>Kilometraje: 63.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $20.045.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- FIAT NOVO UNO 1.4 8V 3 PTAS INT 914-->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Fiat uno attractive 3p" class="w-full h-64 object-cover" src="img/uno.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT NOVO UNO 1.4 8V 3 PTAS</h3>
+<p>Año: 2012</p>
+<p>Kilometraje: 78.000 km</p>
+<p>Estado: Usado – Buen estado</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $10.521.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- RENAULT SANDERO PH2 STEPWAY INTENS 1.6 INT 938-->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Renault sandero stepway" class="w-full h-64 object-cover" src="img/sandero2.jpg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">RENAULT SANDERO PH2 STEPWAY INTENS 1.6</h3>
+<p>Año: 2023</p>
+<p>Kilometraje: 27.100 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $21.520.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<!-- TOYOTA ETIOS XLS 1.5 M/T 4 PTAS INT 954 -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Toyota etios" class="w-full h-64 object-cover" src="img/toyotaetios1.jpg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">TOYOTA ETIOS XLS 1.5 M/T 4 PTAS </h3>
+<p>Año: 2019</p>
+<p>Kilometraje: 141.000 km</p>
+<p>Estado: Usado – Muy buen estado</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $16.462.500</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- NISSAN VERSA 1.6 SENSE CVT INT 903 -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Nissan Versa" class="w-full h-64 object-cover" src="img/nissanversa.jpg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">NISSAN VERSA 1.6 SENSE CVT</h3>
+<p>Año: 2021</p>
+<p>Kilometraje: 85.840 km</p>
+<p>Estado: Usado – Impecable</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $20.312.500</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- FORD FIESTA 1.6 L TITANIUM INT 910 -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/fiestatitanium.jpg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FORD FIESTA 1.6 L TITANIUM</h3>
+<p>Año: 2015</p>
+<p>Kilometraje: 105.331 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $14.464.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- FIAT TORO FREEDOM 2.0 16V 4X4 INT 920  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/TORO920.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT TORO FREEDOM 2.0 16V 4X4</h3>
+<p>Año: 2016</p>
+<p>Kilometraje: 151.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 $20.760.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- RENAULT NUEV LOGAN AUTENTIQUE PLUS 1.6 INT 997  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/LOGAN997.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">RENAULT LOGAN AUTENTIQUE PLUS 1.6</h3>
+<p>Año: 2019</p>
+<p>Kilometraje: 105.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 Consultar </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- RENAULT STEPWAY DYNAMIQUE 5P INT 930  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/SANDERO930.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">RENAULT STEPWAY DYNAMIQUE 5P</h3>
+<p>Año: 2017</p>
+<p>Kilometraje: 104.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 13.905.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- VOLKSWAGEN T-CROSS TRENDLINE 1.6 MSI 110C INT 980  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/tcross.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">VOLKSWAGEN T-CROSS TRENDLINE 1.6 MSI 110C</h3>
+<p>Año: 2020</p>
+<p>Kilometraje: 70.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 25.620.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- CHEVROLET ONIX JOY 5 P 1.4 NLS MT+ INT 973  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/onix.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">CHEVROLET ONIX JOY 5P 1.4 </h3>
+<p>Año: 2019</p>
+<p>Kilometraje: 69.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 15.700.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- RENAULT KWID INTENS 1.0 INT 955  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/KWID955.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">RENAULT KWID INTENS 1.0 </h3>
+<p>Año: 2019</p>
+<p>Kilometraje: 100.600 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 14.475.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- PEUGEOT 2008 FELINE 1.6 INT 993  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/2008993.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">PEUGEOT 2008 FELINE 1.6 </h3>
+<p>Año: 2018</p>
+<p>Kilometraje: 7.200 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 20.600.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- FIAT STRADA TREKKING CD 1.3 JTD INT 982  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/STRADA982.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT STRADA TREKKING CD 1.3 JTD </h3>
+<p>Año: 2016</p>
+<p>Kilometraje: 148.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 14.400.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!--VOLKSWAGEN SURAN 1.6 5D 212 INT 995  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/SURAN995.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">VOLKSWAGEN SURAN 1.6  </h3>
+<p>Año: 2017</p>
+<p>Kilometraje: 146.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 18.400.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- RENAULT KANGOO PH3 CONFORT INT 966  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/KANGOO972.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">RENAULT KANGOO PH3 CONFORT </h3>
+<p>Año: 2015</p>
+<p>Kilometraje: 65.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 12.450.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- FIAT CRONOS DRIVE 1.3 MT INT 992 -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/CRONOS992.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT CRONOS DRIVE 1.3 MT </h3>
+<p>Año: 2018</p>
+<p>Kilometraje: 77.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 14.175.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- FIAT ARGO DRIVE 1.3 INT 953  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/ARGO953.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT ARGO DRIVE 1.3 </h3>
+<p>Año: 2018</p>
+<p>Kilometraje: 85.400 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 17.310.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- VOLKSWAGEN GOL TREND TRENDLINE  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/gol981.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">VOLKSWAGEN GOL TREND TRENDLINE </h3>
+<p>Año: 2022</p>
+<p>Kilometraje: 41.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 19.110.000 </p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- FIAT MOBI TREKKING 1.0 MT INTERNO 994  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/mobi994.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT MOBI TREKKING 1.0 MT </h3>
+<p>Año: 2025</p>
+<p>Kilometraje: 200 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 Consultar</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!-- FIAT ARGO DRIVE 1.3 interno 944  -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/argo944.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT ARGO DRIVE 1.3 </h3>
+<p>Año: 2018</p>
+<p>Kilometraje: 127.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 15.545.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+<!--  PEUGEOT 208 ACTIVE PACK 1.6L AM23.5 interno 987 -->
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E]">
+<img alt="Ford fiesta titanium" class="w-full h-64 object-cover" src="img/208987.jpeg"/>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">PEUGEOT 208 ACTIVE PACK 1.6L AM23.5 </h3>
+<p>Año: 2023</p>
+<p>Kilometraje: 19.000 km</p>
+<p>Estado: Usado – Excelente condición</p>
+<p>Transferencia Incluida</p>
+<p class="text-sm mb-2 font-semibold">💸 22.605.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="window.location='#reservas'">Consultar</button>
+</div>
+</div>
+
+
+</div>
+</section>
+
+<!-- GALERÍA 0KM -->
+
+<section class="py-10 scroll-mt-[140px]" id="cero-km">
+<h2 class="text-2xl font-bold text-center text-[#1E1E1E] mb-10">GALERÍA 0KM</h2>
+<div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3" id="autos0kmContainer">
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat Cronos 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Mobi-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT MOBI TREKKING</h3>
+<p class="text-sm mb-2 font-semibold">💸 $25.800.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat argo drive 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Argo-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT ARGO DRIVE 1.3</h3>
+<p class="text-sm mb-2 font-semibold">💸 $29.700.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat CRONOS" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Cronos-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT CRONOS 1.3 Pack Plus</h3>
+<p class="text-sm mb-2 font-semibold">💸 $34.800.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat TITANO " class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/fiat_carrusel_titano.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT TITANO RANCH</h3>
+<p class="text-sm mb-2 font-semibold">💸 $66.700.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat TORO 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/fiat-toro-freedom-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT TORO 1.3 T270 //2.0</h3>
+<p class="text-sm mb-2 font-semibold">💸 $44.900.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat STRADA 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Strada-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT STRADA 1.3 // 1.0 T200</h3>
+<p class="text-sm mb-2 font-semibold">💸 $35.700.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat PULSE 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Pulse-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT PULSE 1.3 DRIVE</h3>
+<p class="text-sm mb-2 font-semibold">💸 $34.900.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat FASTBACK 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Fastback-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT FASTBACK</h3>
+<p class="text-sm mb-2 font-semibold">💸 $43.200.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat FIORINO 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Friorino-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT FIORINO</h3>
+<p class="text-sm mb-2 font-semibold">💸 $29.400.000</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+<div class="auto-card bg-[#2F2F2F] rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] relative">
+<img alt="Fiat DUCATO 0km" class="w-full h-64 object-cover" src="https://www.fiat.com.ar/content/dam/fiat/nova-home/carrossel/Ducato-carrusel.png"/>
+<div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">El precio incluye Flete y patentamiento</div>
+<div class="p-4 text-white">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-1">FIAT DUCATO</h3>
+<p class="text-sm mb-2 font-semibold">💸 CONSULRAR</p>
+<button class="mt-2 bg-[#C6A75E] text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onclick="openModal('modalReserva')">Consultar</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Plan de ahorro -->
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Plan de Ahorro</title>
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5eb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .planes-section {
+      padding: 60px 20px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .planes-section h2 {
+      text-align: center;
+      font-size: 42px;
+      color: #e4002b;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .planes-section p.sub {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 50px;
+    }
+
+    .planes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .plan-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px 20px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .plan-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #e4002b;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px 20px;
+      transform: skewX(-20deg);
+      transform-origin: left;
+    }
+
+    .plan-card img {
+      height: 130px;
+      object-fit: contain;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .plan-price {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .plan-price strong {
+      font-weight: bold;
+      color: #1e1e1e;
+    }
+
+    .plan-button {
+      display: inline-block;
+      padding: 10px 22px;
+      background-color: #e4002b;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .plan-button:hover {
+      background-color: #c60024;
+    }
+  </style>
+<section class="planes-section scroll-mt-[140px] pt-[180px]" id="plan-ahorro">
+<h2 class="text-center text-4xl font-extrabold text-[#e4002b] mb-4">PLAN DE AHORRO</h2>
+<p class="text-center text-lg text-gray-700 mb-10">Consultá nuestras opciones de financiación y suscribite al plan ideal para vos.</p>
+<div class="relative"><button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#C6A75E] text-black font-bold px-3 py-2 rounded-full shadow-lg z-10 hover:bg-yellow-400" onclick="scrollPlanes(-1)">←</button><div class="flex overflow-x-auto space-x-6 pb-4 scroll-smooth snap-x snap-mandatory" id="carouselPlanes"><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Nuevo</span>
+<img alt="Fiat Titano" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/16/bqRE4Ivsw23nhZyTIbMSWewaX7E406ikJc2epeda.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Titano</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$406.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal1')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Nuevo</span>
+<img alt="Fiat Argo Drive 1.3 MT" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/15/KyvaYQaUw1YueyqJ8KBMgiHYeOS5czUmnjqo3boB.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Argo Drive 1.3 MT</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$231.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal2')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Más vendido</span>
+<img alt="Fiat Cronos Drive Pack Plus (70/30)" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/2/8OswnQPNhKXxMkTCPgCaKaQrATkrEpxf6a47swpt.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Cronos Drive Pack Plus (70/30)</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$273.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal3')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Oportunidad</span>
+<img alt="Fiat Fastback" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/12/23Kx5TuFdsoKRuVALOvLKIPHJb5wCRf0OiNrL65D.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Fastback</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$ 290.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal4')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Pick up</span>
+<img alt="Fiat Toro Freedom T270" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/14/W1F9ZIZOwfHFNeVenXNjsDoy4JPSK6pW7FHbLqab.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Toro Freedom T270</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$ 352.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal5')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Utilitacio más vendido</span>
+<img alt="Fiat Fiorino Endurance" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/10/SgMfKFLWDGZLRaQHzNXVQsOmefFmCDf2OaGpm9YF.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Fiorino Endurance</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$228.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal6')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Oportunidad</span>
+<img alt="Fiat Pulse Drive 1.3 MT" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/4/XNWoXYfNzm28it9Msbk8nbgg4XlYDQy5h7aPxkPL.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Pulse Drive 1.3 MT</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$273.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal7')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">La más vendida</span>
+<img alt="Fiat Strada Freedom 1.3 MT" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/11/7TIMjM7K1ICsKghxmH4eSSN9Dh3OK0tbIjzXNhyc.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Strada Freedom 1.3 MT</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$280.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal8')">
+        CONOCÉ MÁS
+      </button>
+</div><div class="bg-white rounded-2xl shadow-xl p-6 relative hover:shadow-2xl transition duration-300 min-w-[300px] snap-start flex-shrink-0">
+<span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">El más Accesible</span>
+<img alt="Fiat Mobi Trekking 1.0" class="w-full h-40 object-contain mb-4" src="https://www.fiatplan.com.ar/storage/modelos/13/wtOJXiAnR7CA7X2BfDtKD80D8xJfAsPH7dZCSZ1U.png"/>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Fiat Mobi Trekking 1.0</h3>
+<p class="text-gray-600 text-base mb-4">
+        Cuotas desde <span class="text-red-600 font-semibold text-lg">$230.000</span>
+</p>
+<button class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition w-full" onclick="openModal('modal9')">
+        CONOCÉ MÁS
+      </button>
+</div></div><button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#C6A75E] text-black font-bold px-3 py-2 rounded-full shadow-lg z-10 hover:bg-yellow-400" onclick="scrollPlanes(1)">→</button></div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal1">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal1')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Titano" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/16/bqRE4Ivsw23nhZyTIbMSWewaX7E406ikJc2epeda.png"/>
+      Fiat Titano - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 2, 4, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Titano')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal2">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal2')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Argo Drive 1.3 MT" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/15/KyvaYQaUw1YueyqJ8KBMgiHYeOS5czUmnjqo3boB.png"/>
+      Fiat Argo Drive 1.3 MT - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 2, 4, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Argo Drive 1.3 MT')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal3">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal3')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Cronos Drive Pack Plus (70/30)" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/2/8OswnQPNhKXxMkTCPgCaKaQrATkrEpxf6a47swpt.png"/>
+      Fiat Cronos Drive Pack Plus (70/30) - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 2, 4, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Cronos Drive Pack Plus (70/30)')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal4">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal4')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Fastback" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/12/23Kx5TuFdsoKRuVALOvLKIPHJb5wCRf0OiNrL65D.png"/>
+      Fiat Fastback - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 4, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Fastback')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal5">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal5')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Toro Freedom T270" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/14/W1F9ZIZOwfHFNeVenXNjsDoy4JPSK6pW7FHbLqab.png"/>
+      Fiat Toro Freedom T270 - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 4, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Toro Freedom T270')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal6">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal6')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Fiorino Endurance" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/10/SgMfKFLWDGZLRaQHzNXVQsOmefFmCDf2OaGpm9YF.png"/>
+      Fiat Fiorino Endurance - Plan Personalizado
+    </h3>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 4, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Fiorino Endurance')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal7">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal7')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Pulse Drive 1.3 MT" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/4/XNWoXYfNzm28it9Msbk8nbgg4XlYDQy5h7aPxkPL.png"/>
+      Fiat Pulse Drive 1.3 MT - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 4, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Pulse Drive 1.3 MT')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal8">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal8')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Strada Freedom 1.3 MT" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/11/7TIMjM7K1ICsKghxmH4eSSN9Dh3OK0tbIjzXNhyc.png"/>
+      Fiat Strada Freedom 1.3 MT - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 6, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Strada Freedom 1.3 MT')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modal9">
+<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full relative border-l-8 border-green-500">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modal9')">×</button>
+<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+<img alt="Fiat Mobi Trekking 1.0" class="w-12 h-12 object-contain inline-block" src="https://www.fiatplan.com.ar/storage/modelos/13/wtOJXiAnR7CA7X2BfDtKD80D8xJfAsPH7dZCSZ1U.png"/>
+      Fiat Mobi Trekking 1.0 - Plan Personalizado
+    </h3>
+<ul class="space-y-4 text-gray-700 text-[17px] leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Entrega asegurada cuota 6, 9, 12, 24, 36.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Descuentos especiales en la primera cuota 50%.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Bonificaciones en adjudicación y gastos administrativos.</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Pack Post-Venta de regalo (Chapón, Polarizado, Service de 10.000km).</span></li>
+<li class="flex items-start gap-2"><span class="text-green-600 text-xl">✅</span><span>Colores a elección sin costo adicional.</span></li>
+</ul>
+<div class="text-center mt-6">
+<button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 transition" onclick="openModal('modalReserva', 'Fiat Mobi Trekking 1.0')">
+        Consultar ahora
+      </button>
+</div>
+</div>
+</div>
+</section>
+<script>
+function openModal(id) {
+  document.getElementById(id).classList.remove('hidden');
+}
+function closeModal(id) {
+  document.getElementById(id).classList.add('hidden');
+}
+</script>
+</main>
+
+<script>
+function scrollPlanes(direction) {
+  const container = document.getElementById('carouselPlanes');
+  const scrollAmount = 320;
+  container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
+</script><script>
+function ocultarBienvenida() {
+  const bienvenida = document.getElementById('bienvenida');
+  const boton = document.getElementById('btnIngresar');
+
+  // Animación de salida del botón
+  boton.classList.add('animate__bounceOut');
+
+  // Desvanece y desactiva interacciones
+  bienvenida.classList.add('opacity-0');
+  bienvenida.classList.add('pointer-events-none');
+
+  // Oculta por completo luego de la transición
+  setTimeout(() => {
+    bienvenida.style.display = 'none';
+  }, 800);
+}
+
+</script>
+<script>
+  function ocultarBienvenida() {
+    const bienvenida = document.getElementById('bienvenida');
+    bienvenida.classList.add('opacity-0');
+    setTimeout(() => {
+      bienvenida.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }, 500);
+  }
+</script>
+
+
+<!-- MODAL DE CONSULTA -->
+<div id="modalConsulta" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+  <div class="bg-white p-6 rounded-xl shadow-2xl max-w-md w-full relative border-l-4 border-yellow-400">
+    <button onclick="cerrarModalConsulta()" class="absolute top-2 right-4 text-gray-600 text-2xl font-bold">&times;</button>
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Consulta rápida</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Nombre completo" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+      <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+      <textarea placeholder="Escribí tu consulta..." class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+      <button type="submit" class="bg-[#C6A75E] hover:bg-yellow-400 text-black font-semibold py-2 px-4 rounded-md w-full">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function abrirModalConsulta() {
+    document.getElementById('modalConsulta').classList.remove('hidden');
+  }
+  function cerrarModalConsulta() {
+    document.getElementById('modalConsulta').classList.add('hidden');
+  }
+</script>
+
+
+<script>
+  function abrirModalReservas() {
+    const modal = document.getElementById('modal1');
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  }
+</script>
+
+</body>
+</html>
+<section class="bg-[#1E1E1E] py-10 px-4">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-2xl font-bold text-white mb-4 text-center">¿Dónde estamos?</h2>
+<div class="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.2253770981433!2d-65.59748292456857!3d-27.347811015152838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9423cf6788abad63%3A0x69e11000583269de!2sShipton%201585%2C%20T4146GZS%20Concepci%C3%B3n%2C%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1690212345678!5m2!1ses!2sar" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</section>
+<!-- PIE DE PÁGINA -->
+<!-- FOOTER -->
+<footer class="bg-[#1E1E1E] text-white px-6 py-6 shadow-inner border-t border-[#C6A75E]">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
+<div class="text-center md:text-left">
+<h3 class="text-xl font-bold text-[#C6A75E] mb-2">FADUA TUCUMÁN S.A.</h3>
+<p>📍 Shipton 1585, Concepción - Tucumán, Argentina</p>
+<p>📲 +54 3865626441</p>
+<p>🕒 Lun a Vie 8:30–12:30 / 17:00–21:00</p>
+<p>🕒 Sáb 9:00–13:00</p>
+</div>
+<div class="flex items-center space-x-4 bg-[#2F2F2F] p-3 rounded-lg shadow-md border border-[#C6A75E]">
+<img alt="Luis Muñoz, asesor comercial" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow" src="img/cara1.jpeg"/>
+<div>
+<p class="font-bold text-[#C6A75E]">Luis Muñoz</p>
+<p>Asesor Comercial</p>
+<p class="text-sm opacity-80">📧 lam1976ventas@gmail.com</p>
+<p class="text-sm opacity-80">📲 +549 3865-626441</p>
+</div>
+</div>
+</div>
+<section class="bg-[#1E1E1E] py-6 text-white">
+<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+<div class="flex gap-4">
+<!-- Facebook -->
+<a aria-label="Facebook" href="https://www.facebook.com/luis.munoz.359126" rel="noopener noreferrer" target="_blank">
+<img alt="Facebook" class="w-6 h-6 hover:scale-110 transition-transform" src="https://cdn-icons-png.flaticon.com/512/124/124010.png"/>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" href="https://www.instagram.com/luisalfredo1976" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" class="w-6 h-6 hover:scale-110 transition-transform" src="https://cdn-icons-png.flaticon.com/512/174/174855.png"/>
+</a>
+<!-- Email -->
+<a aria-label="Email" href="mailto:luisalfredo1976@hotmail.com">
+<img alt="Email" class="w-6 h-6 hover:scale-110 transition-transform" src="https://cdn-icons-png.flaticon.com/512/732/732200.png"/>
+</a>
+<!-- WhatsApp -->
+<a aria-label="WhatsApp" href="https://wa.me/5493865626441" rel="noopener noreferrer" target="_blank">
+<img alt="WhatsApp" class="w-6 h-6 hover:scale-110 transition-transform" src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/>
+</a>
+</div>
+</div>
+</section>
+</footer>
+<script>
+  // Año actual automático en el footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<!-- SCRIPT MENÚ MÓVIL -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+<!-- SCRIPT FILTRO -->
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const autosUsados = document.getElementById('autosUsadosContainer').getElementsByClassName('auto-card');
+    const autos0km = document.getElementById('autos0kmContainer').getElementsByClassName('auto-card');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+
+      function filterAutos(autos) {
+        for (let auto of autos) {
+          const text = auto.textContent.toLowerCase();
+          auto.style.display = text.includes(filter) ? '' : 'none';
+        }
+      }
+
+      filterAutos(autosUsados);
+      filterAutos(autos0km);
+    });
+  </script>
+<script>
+    const buttons = document.querySelectorAll(".open-modal");
+    const modal = document.getElementById("modalPlan");
+    const closeModal = document.getElementById("closeModal");
+
+    buttons.forEach(btn => {
+      btn.onclick = () => {
+        modal.style.display = "block";
+      };
+    });
+
+    closeModal.onclick = () => modal.style.display = "none";
+
+    window.onclick = e => {
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+<script>
+function openModal(id) {
+  document.getElementById(id).classList.remove('hidden');
+}
+function closeModal(id) {
+  document.getElementById(id).classList.add('hidden');
+}
+</script>
+<!-- MODAL RESERVA -->
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="modalReserva">
+<div class="bg-white p-4 rounded-xl shadow-xl max-w-sm w-full max-h-[90vh] overflow-y-auto relative border-l-4 border-yellow-400">
+<button class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl font-bold" onclick="closeModal('modalReserva')">×</button>
+<section class="w-full space-y-6" id="reservas">
+<h2 class="text-xl font-bold text-center text-gray-800 mb-2">HAZ TU CONSULTA</h2>
+<form action="reservar.php" class="space-y-4 text-sm" method="POST">
+<!-- nombre -->
+<div>
+<label class="block font-medium mb-1" for="nombre">Nombre completo</label>
+<input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required="" type="text"/>
+</div>
+<!-- email -->
+<div>
+<label class="block font-medium mb-1" for="email">Correo electrónico</label>
+<input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300" id="email" name="email" placeholder="Ej: juan@email.com" required="" type="email"/>
+</div>
+<!-- teléfono -->
+<div>
+<label class="block font-medium mb-1" for="telefono">Teléfono</label>
+<input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300" id="telefono" name="telefono" placeholder="Ej: 3811234567" required="" type="tel"/>
+</div>
+<!-- modelo -->
+<div>
+<label class="block font-medium mb-1" for="modelo">Modelo a consultar</label>
+<textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 resize-none" id="modelo" name="modelo" placeholder="Ej: Fiat Cronos Drive 1.3" rows="3"></textarea>
+</div>
+<!-- usado -->
+<div>
+<label class="block font-medium mb-1" for="modelo">Tenes usado?</label>
+<textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 resize-none" id="usado" name="usado" placeholder="Ingresa tu usado" rows="3"></textarea>
+</div>
+
+<button class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition" type="submit">
+          Enviar Consulta
+        </button>
+</form>
+</section>
+</div>
+</div>
